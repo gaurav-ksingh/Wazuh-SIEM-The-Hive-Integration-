@@ -122,7 +122,7 @@ Add:
   <api_key>YOUR_THEHIVE_API_KEY</api_key>
   <alert_format>json</alert_format>
 </integration>
-
+ ```
 
 ## Restart Wazuh Manager
 
