@@ -84,3 +84,19 @@ def main(args):
 if __name__ == "__main__":
     main(sys.argv)
 
+```
+STEP 4 – Create Bash Wrapper Script
+File Path
+```bash
+/var/ossec/integrations/custom-w2thive
+```
+```bash
+#!/bin/sh
+WPYTHON_BIN="framework/python/bin/python3"
+SCRIPT_NAME="$(basename "$0")"
+DIR_NAME="$(cd "$(dirname "$0")" && pwd)"
+WAZUH_PATH="$(cd "$DIR_NAME/.." && pwd)"
+
+$WAZUH_PATH/$WPYTHON_BIN $DIR_NAME/$SCRIPT_NAME.py "$@"
+
+```
