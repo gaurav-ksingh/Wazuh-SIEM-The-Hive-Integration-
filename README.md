@@ -85,7 +85,7 @@ if __name__ == "__main__":
     main(sys.argv)
 
 ```
-STEP 4 – Create Bash Wrapper Script
+## STEP 4 – Create Bash Wrapper Script
 File Path
 ```bash
 /var/ossec/integrations/custom-w2thive
@@ -100,3 +100,50 @@ WAZUH_PATH="$(cd "$DIR_NAME/.." && pwd)"
 $WAZUH_PATH/$WPYTHON_BIN $DIR_NAME/$SCRIPT_NAME.py "$@"
 
 ```
+## STEP 5 – Set Permissions
+```bash
+sudo chmod 755 /var/ossec/integrations/custom-w2thive.py
+sudo chmod 755 /var/ossec/integrations/custom-w2thive
+sudo chown root:wazuh /var/ossec/integrations/custom-w2thive*
+
+```
+## STEP 6 – Enable Integration in Wazuh
+Edit configuration file:
+```bash
+sudo nano /var/ossec/etc/ossec.conf
+
+```
+Add:
+
+<integration>
+  <name>custom-w2thive</name>
+  <hook_url>http://THEHIVE_SERVER_IP:9000</hook_url>
+  <api_key>YOUR_THEHIVE_API_KEY</api_key>
+  <alert_format>json</alert_format>
+</integration>
+
+## Restart Wazuh Manager
+
+```bash
+sudo systemctl restart wazuh-manager
+```
+
+# Validation
+
+Generate a Wazuh alert
+
+Open TheHive → Alerts
+
+Confirm alert ingestion
+
+# Features
+
+Automatic Wazuh → TheHive alert forwarding
+
+Artifact extraction (IP)
+
+Severity-based filtering
+
+SOC-ready workflow integration
+
+
