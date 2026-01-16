@@ -1,12 +1,12 @@
-# Wazuh-SIEM-The-Hive-Integration
 
-# 🔗 Wazuh to TheHive Integration (Custom Python Script)
+
+#  Wazuh to TheHive Integration (Custom Python Script)
 
 This repository demonstrates how to integrate **Wazuh Manager** with **TheHive** using a **custom Python integration** to forward Wazuh alerts into TheHive for incident response and case management.
 
 ---
 
-## 🧪 Environment
+##  Environment
 
 - Wazuh Manager (OVA / VirtualBox)
 - TheHive v5.2.1
