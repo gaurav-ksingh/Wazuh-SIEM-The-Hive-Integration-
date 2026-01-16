@@ -115,12 +115,14 @@ sudo nano /var/ossec/etc/ossec.conf
 ```
 Add:
 
+```xml
 <integration>
   <name>custom-w2thive</name>
   <hook_url>http://THEHIVE_SERVER_IP:9000</hook_url>
   <api_key>YOUR_THEHIVE_API_KEY</api_key>
   <alert_format>json</alert_format>
 </integration>
+
 
 ## Restart Wazuh Manager
 
