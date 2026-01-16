@@ -1,9 +1,23 @@
 # Wazuh-SIEM-The-Hive-Integration
 
-# STEP 1 – Install Python & PIP on Wazuh Server
+# 🔗 Wazuh to TheHive Integration (Custom Python Script)
 
-Update the system and install Python 3:
+This repository demonstrates how to integrate **Wazuh Manager** with **TheHive** using a **custom Python integration** to forward Wazuh alerts into TheHive for incident response and case management.
 
+---
+
+## 🧪 Environment
+
+- Wazuh Manager (OVA / VirtualBox)
+- TheHive v5.2.1
+- OSSEC Path: `/var/ossec`
+- Python not preinstalled by default
+
+---
+
+## 📌 STEP 1 – Install Python & PIP
+
+```bash
 sudo yum update
 sudo yum install python3
 
