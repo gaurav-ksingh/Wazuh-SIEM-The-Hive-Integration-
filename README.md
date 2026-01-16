@@ -193,9 +193,6 @@ File Path
 ```
 ```bash
 #!/bin/sh
-# Copyright (C) 2015-2020, Wazuh Inc.
-# Created by Wazuh, Inc. <info@wazuh.com>.
-# This program is free software; you can redistribute it and/or modify it under the terms of GP>
 WPYTHON_BIN="framework/python/bin/python3"
 SCRIPT_PATH_NAME="$0"
 DIR_NAME="$(cd $(dirname ${SCRIPT_PATH_NAME}); pwd -P)"
