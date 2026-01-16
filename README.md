@@ -37,6 +37,8 @@ File Path
 /var/ossec/integrations/custom-w2thive.py
 
 ```
+## Put below script in w2hive.py
+
 #!/var/ossec/framework/python/bin/python3
 import json, sys, os, re, logging, uuid
 from thehive4py.api import TheHiveApi
