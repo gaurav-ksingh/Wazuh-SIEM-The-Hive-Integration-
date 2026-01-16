@@ -21,3 +21,5 @@ This repository demonstrates how to integrate **Wazuh Manager** with **TheHive**
 sudo yum update
 sudo yum install python3
 
+STEP 2 – Install TheHive Python Module
+sudo /var/ossec/framework/python/bin/pip3 install thehive4py
