@@ -1,17 +1,21 @@
 # Wazuh-SIEM-The-Hive-Integration
 
-STEP1 - Install Python & PIP on your Wazuh server
+# STEP1 - Install Python & PIP on your Wazuh server
 
 This lab assumes you are using the provided Wazuh VirtualBox image (.OVA) that I used, which did not have Python preinstalled.
 
 sudo yum update
 sudo yum install python3
-STEP2 - Install The Hive Python module using PIP
+
+
+# STEP2 - Install The Hive Python module using PIP
 
 This is the Python module that will be referenced in the custom integration script that we will be creating in the next step. I have tested this module with version 5.2.1 of The Hive and its working at the time of this writeup.
 
 sudo /var/ossec/framework/python/bin/pip3 install thehive4py
-STEP3 - Creating the custom integration script
+
+
+# STEP3 - Creating the custom integration script
 
 The below script will need to be created in /var/ossec/integrations/ and called custom-w2thive.py I used nano to create/edit the script, however, you can use whatever text editor you like for this.
 
